@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    $flag=$_SESSION['flag'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -87,6 +91,15 @@
                     </div>
                 </div>
                 <div class="sec-wp">
+                <?php
+                        if($flag==1){
+                            echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
+                            <strong>Login sucessfully!</strong> 
+                            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                          </div>";
+                          $_SESSION['flag']=0;
+                        }
+                    ?>
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-6">
