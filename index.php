@@ -1,3 +1,4 @@
+<!-- This is the main page of our website -->
 <?php
     session_start();
     $flag=$_SESSION['flag'];
