@@ -9,10 +9,10 @@ body{
   background: #FCBA7F;
 }
 .wrapper{
-  position: absolute;
+  position: relative;
   /* bottom: 30px; */
   top: 200px;
-  /* left: 30px; */
+   left: 330px;
   right: 500px;
   max-width: 900px;
   height: 320px;

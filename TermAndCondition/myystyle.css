@@ -72,10 +72,14 @@ body{
 }
 
 .red-btn{
+    position:relative;
+    left:20px;
     background-color: #d13639;
 }
 
 .gray-btn{
+    position:relative;
+    left:-60px;
     background-color: #282828;
     
 }

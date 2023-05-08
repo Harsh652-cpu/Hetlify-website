@@ -1049,7 +1049,7 @@
                                     <div class="footer-info">
                                         <div class="footer-logo">
                                             <a href="index.html">
-                                                <img src="logo.png" alt="">
+                                                <img src="Hetlify Logo.jpg" alt="">
                                             </a>
                                         </div>
                                         <p>Our Mission is to Make Every people Fit.
