@@ -1103,9 +1103,9 @@
                                         <div class="footer-menu">
                                             <h3 class="h3-title">Company</h3>
                                             <ul>
-                                                <li><a href="/TermAndCondition/term.html">Terms & Conditions</a></li>
-                                                <li><a href="/TermAndCondition/privacypolicy/privacy.html">Privacy Policy</a></li>
-                                                <li><a href="/TermAndCondition/cookiepolicy/cookie.html">Cookie Policy</a></li>
+                                                <li><a href="TermAndCondition/term.html">Terms & Conditions</a></li>
+                                                <li><a href="TermAndCondition/privacypolicy/privacy.html">Privacy Policy</a></li>
+                                                <li><a href="TermAndCondition/cookiepolicy/cookie.html">Cookie Policy</a></li>
                                             </ul>
                                         </div>
                                     </div>

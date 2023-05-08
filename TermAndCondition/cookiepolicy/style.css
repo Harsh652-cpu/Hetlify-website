@@ -13,7 +13,7 @@ body{
   /* bottom: 30px; */
   top: 200px;
   /* left: 30px; */
-  right: 400px;
+  right: 500px;
   max-width: 900px;
   height: 320px;
   background: #fff;
@@ -71,4 +71,8 @@ body{
 }
 .buttons a{
   color: #FCBA7F;
+}
+
+.buttons{
+
 }
