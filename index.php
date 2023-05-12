@@ -137,8 +137,8 @@
                 </div>
             </section>
 
-
-            <section class="brands-sec">
+<!-- The below code is for brands portion in website -->
+            <!-- <section class="brands-sec">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
@@ -165,7 +165,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <section class="about-sec section" id="about">
                 <div class="container">
@@ -968,12 +968,13 @@
                                         <div class="blog-img back-img"
                                             style="background-image: url(assets/images/blog/blog1.jpg);"></div>
                                         <div class="blog-text">
-                                            <p class="blog-date">March.15.2023</p>
-                                            <a href="#" class="h4-title">Energy Drink which you can make at home.</a>
-                                            <p>Energy drinks made easily at home.
-                                                However, the amount of caffeine differs from product to product.
-                                                This table shows the caffeine content of some popular energy drinks:</p>
-                                            <a href="#" class="sec-btn">Read More</a>
+                                            <p class="blog-date">May.12.2023</p>
+                                            <a href="#" class="h4-title">All about different categories of Energy Drinks.</a>
+                                            <p>Energy drinks can be made easily at home.
+                                                However, the amount of caffeine differs from product to product.So,it is better to purchase
+                                                a one from market.
+                                                </p>
+                                            <a href="https://hetlifyblog.blogspot.com/2023/05/all-about-different-categories-of.html" class="sec-btn">Read More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -982,12 +983,11 @@
                                         <div class="blog-img back-img"
                                             style="background-image: url(assets/images/blog/blog2.jpg);"></div>
                                         <div class="blog-text">
-                                            <p class="blog-date">April.01.2023</p>
+                                            <p class="blog-date">May.12.2023</p>
                                             <a href="#" class="h4-title">Fresh Veggie and rice combo for dinner.</a>
-                                            <p>It's a very simple recipe. The two main ingredients are mixed veggies
-                                                and rice. And the rest of the ingredients are pantry staples.
-                                                And this recipe takes only 10 minutes to prepare.</p>
-                                            <a href="#" class="sec-btn">Read More</a>
+                                            <p>This classic Veg Fried Rice recipe is made with a hearty mix of fresh vegetables, green onions, 
+                                                seasonings and spices for an incredibly flavorful fried rice dish.</p>
+                                            <a href="https://hetlifyblog.blogspot.com/2023/05/this-classic-veg-fried-rice-recipe-is.html" class="sec-btn">Read More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -996,12 +996,12 @@
                                         <div class="blog-img back-img"
                                             style="background-image: url(assets/images/blog/blog3.jpg);"></div>
                                         <div class="blog-text">
-                                            <p class="blog-date">November.15.2021</p>
-                                            <a href="#" class="h4-title">Chicken burger with double nuggets</a>
-                                            <p>A great chicken burger recipe! Natasha is my eldest daughter, and her eyes light up when I announce we're  
-                                                having these for dinner. we prefer grating it so as to hide it.</p>
+                                            <p class="blog-date">May.12.2023</p>
+                                            <a href="#" class="h4-title">What actually eating a balance diet means?</a>
+                                            <p>Eating a healthy, balanced diet is an important part of maintaining good health, and can help you feel your best.
+                                                </p>
                                         </p>
-                                            <a href="#" class="sec-btn">Read More</a>
+                                            <a href="https://hetlifyblog.blogspot.com/2023/05/what-actually-eating-balance-diet-means.html" class="sec-btn">Read More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1021,8 +1021,7 @@
                                         <div class="sec-wp">
                                             <div class="newsletter-box-text">
                                                 <h2 class="h2-title">Subscribe our newsletter</h2>
-                                                <p>This is Lorem ipsum dolor sit amet consectetur adipisicing elit ad
-                                                    veritatis.</p>
+                                                <p>You will get notifications through mail</p>
                                             </div>
                                             <form action="#" class="newsletter-form">
                                                 <input type="email" class="form-input"
