@@ -1,7 +1,11 @@
 <!-- This is the main page of our website -->
 <?php
-    session_start();
-    $flag=$_SESSION['flag'];
+session_start();
+$flag= 0;
+$flag = $_SESSION['flag'];
+
+$javaScriptLogin = $flag;
+$json = json_encode($javaScriptLogin);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +26,7 @@
     <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
     <!-- custom css  -->
     <link rel="stylesheet" href="mainstyle.css">
-    
+
 </head>
 
 <body class="body-fixed">
@@ -62,22 +66,24 @@
                                 <i class="uil uil-shopping-bag"></i>
                                 <span class="cart-number">3</span>
                             </a> -->
-                            
-                            <a href="./youtubelogin/login.php" class="header-btn" id="insertJavascript">
+
+
+                            <a href="#" class="header-btn" id="insertJavascript" onclick="isLogin()">
                                 <i class="uil uil-user-md"></i>
                             </a>
+
                             <!-- Hey this is Saurabh tiwari, I am making this chnages for my first pull request -->
                             <!-- Harsh Raj Varma is a very coperative guy. He is very handsome and cool person -->
                             <!-- after login userName will be show -->
-                                <!-- <div class="userName1">
+                            <!-- <div class="userName1">
                                     <button class="btn-userName">Abhishek</button>
                                     
                                 </div> -->
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </header>
     <!-- header ends  -->
@@ -94,14 +100,15 @@
                     </div>
                 </div>
                 <div class="sec-wp">
-                <?php
-                        if($flag==1){
-                            echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
+                    <?php
+                    $javaScriptLogin = 0;
+                    if ($flag == 1) {
+                        echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
                             <strong>Login sucessfully!</strong> 
                             <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
                           </div>";
-                          $_SESSION['flag']=0;
-                        }
+                        $_SESSION['flag'] = 0;
+                    }
                     ?>
                     <div class="container">
                         <div class="row">
@@ -110,18 +117,22 @@
                                     <h1 class="h1-title">
                                         We Help You Check Your
                                         <span>Diet</span>
-                                            Plan
+                                        Plan
                                     </h1>
-                                    <p>The  Diet is a long-term weight management program created by a team of weight-loss experts.
+                                    <p>The Diet is a long-term weight management program created by a team of
+                                        weight-loss experts.
 
-                                        The program has been updated and is designed to help you reshape your lifestyle by adopting healthy new habits and breaking unhealthy old ones. The goal is to make simple, pleasurable changes that will result in a healthy weight that you can maintain for the rest of your life.
-                                        </p>
+                                        The program has been updated and is designed to help you reshape your lifestyle
+                                        by adopting healthy new habits and breaking unhealthy old ones. The goal is to
+                                        make simple, pleasurable changes that will result in a healthy weight that you
+                                        can maintain for the rest of your life.
+                                    </p>
                                     <div class="banner-btn mt-4">
                                         <a href="#menu" class="sec-btn">Check our Menu</a>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-lg-6">
                                 <div class="banner-img-wp">
                                     <div class="banner-img" style="background-image: url(assets/images/main-b.jpg);">
@@ -137,7 +148,7 @@
                 </div>
             </section>
 
-<!-- The below code is for brands portion in website -->
+            <!-- The below code is for brands portion in website -->
             <!-- <section class="brands-sec">
                 <div class="container">
                     <div class="row">
@@ -177,11 +188,14 @@
                                 <div class="sec-title-shape mb-4">
                                     <img src="assets/images/title-shape.svg" alt="">
                                 </div>
-                                <p>The program focuses on eating delicious healthy foods and increasing physical activity.
-                                     It emphasizes that the best way to keep weight off for good is to change your lifestyle 
-                                     and adopt new habits that you enjoy and can stick with. This program can be tailored to 
-                                     your own individual needs, health history and preferred eating style.
-                                    </p>
+                                <p>The program focuses on eating delicious healthy foods and increasing physical
+                                    activity.
+                                    It emphasizes that the best way to keep weight off for good is to change your
+                                    lifestyle
+                                    and adopt new habits that you enjoy and can stick with. This program can be tailored
+                                    to
+                                    your own individual needs, health history and preferred eating style.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -277,7 +291,7 @@
                                                 <li>
                                                     <b></b>
                                                 </li>
-                                                
+
                                             </ul>
                                         </div>
                                     </div>
@@ -314,7 +328,7 @@
                                                 <li>
                                                     <b></b>
                                                 </li>
-                                                
+
                                             </ul>
                                         </div>
                                     </div>
@@ -350,7 +364,7 @@
                                                 <li>
                                                     <b></b>
                                                 </li>
-                                                
+
                                             </ul>
                                         </div>
                                     </div>
@@ -387,7 +401,7 @@
                                                 <li>
                                                     <b></b>
                                                 </li>
-                                                
+
                                             </ul>
                                         </div>
                                     </div>
@@ -424,7 +438,7 @@
                                                 <li>
                                                     <b></b>
                                                 </li>
-                                                
+
                                             </ul>
                                         </div>
                                     </div>
@@ -460,7 +474,7 @@
                                                 <li>
                                                     <b></b>
                                                 </li>
-                                                
+
                                             </ul>
                                         </div>
                                     </div>
@@ -482,7 +496,9 @@
                         <div class="col-lg-7">
                             <div class="sec-text">
                                 <h2 class="xxl-title">Eggs</h2>
-                                <p>Also, the natural sugar in fruit does affect your carbohydrate intake — especially if you eat a lot of fruit. This may temporarily raise your blood sugar or certain blood fats. However, this effect is lessened if you are losing weight.</p>
+                                <p>Also, the natural sugar in fruit does affect your carbohydrate intake — especially if
+                                    you eat a lot of fruit. This may temporarily raise your blood sugar or certain blood
+                                    fats. However, this effect is lessened if you are losing weight.</p>
                                 <p>This is Lorem ipsum dolor sit amet consectetur adipisicing elit. At fugit laborum
                                     voluptas magnam sed ad illum? Minus officiis quod deserunt.</p>
 
@@ -498,13 +514,16 @@
                         <div class="col-lg-6 order-lg-1 order-2">
                             <div class="sec-text">
                                 <h2 class="xxl-title">Peanut Butter</h2>
-                                <p>Peanut butter is a protein-packed spread popular around the world. It’s made of ground peanuts — often roasted first — blended into a thick paste. 
-                                    
-                                    
+                                <p>Peanut butter is a protein-packed spread popular around the world. It’s made of
+                                    ground peanuts — often roasted first — blended into a thick paste.
 
-                                    </p>
+
+
+                                </p>
                                 <p>
-                                    Natural peanut butter is available at health food stores and specialty grocers, and can be easily found online. Look for a product that contains no additives other than a little salt. </p>
+                                    Natural peanut butter is available at health food stores and specialty grocers, and
+                                    can be easily found online. Look for a product that contains no additives other than
+                                    a little salt. </p>
                             </div>
                         </div>
                         <div class="col-lg-6 order-lg-2 order-1">
@@ -637,7 +656,8 @@
                                         <div class="social-icon">
                                             <ul>
                                                 <li>
-                                                    <a href="https://www.linkedin.com/in/harsh-raj-varma-92aa171aa" target="_blank"><i class="uil uil-linkedin"></i></a>
+                                                    <a href="https://www.linkedin.com/in/harsh-raj-varma-92aa171aa"
+                                                        target="_blank"><i class="uil uil-linkedin"></i></a>
                                                 </li>
                                                 <li>
                                                     <a href="https://www.instagram.com/hrv003" target="_blank">
@@ -645,7 +665,8 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="https://www.youtube.com/channel/UCTFYUXIXmzztLQ0EcdtiepQ" target="blank">
+                                                    <a href="https://www.youtube.com/channel/UCTFYUXIXmzztLQ0EcdtiepQ"
+                                                        target="blank">
                                                         <i class="uil uil-youtube"></i>
                                                     </a>
                                                 </li>
@@ -663,15 +684,18 @@
                                         <div class="social-icon">
                                             <ul>
                                                 <li>
-                                                    <a href="https://www.linkedin.com/in/abhishek-kumar-8b873a21b" target="_blank"><i class="uil uil-linkedin"></i></a>
+                                                    <a href="https://www.linkedin.com/in/abhishek-kumar-8b873a21b"
+                                                        target="_blank"><i class="uil uil-linkedin"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a href="https://www.instagram.com/abhishek_chauhan.__/" target="blank">
+                                                    <a href="https://www.instagram.com/abhishek_chauhan.__/"
+                                                        target="blank">
                                                         <i class="uil uil-instagram"></i>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="https://www.youtube.com/channel/UCWXLVr2x5zv78CMMDoW9voQ" target="_blank">
+                                                    <a href="https://www.youtube.com/channel/UCWXLVr2x5zv78CMMDoW9voQ"
+                                                        target="_blank">
                                                         <i class="uil uil-youtube"></i>
                                                     </a>
                                                 </li>
@@ -689,7 +713,8 @@
                                         <div class="social-icon">
                                             <ul>
                                                 <li>
-                                                    <a href="https://www.linkedin.com/in/saurabh-kumar97" target="_blank"><i class="uil uil-linkedin"></i></a>
+                                                    <a href="https://www.linkedin.com/in/saurabh-kumar97"
+                                                        target="_blank"><i class="uil uil-linkedin"></i></a>
                                                 </li>
                                                 <li>
                                                     <a href="https://www.instagram.com/ims__tiwari" target="_blank">
@@ -708,14 +733,15 @@
                                 <div class="col-lg-4 swiper-slide">
                                     <div class="team-box text-center">
                                         <div style="background-image: url(assets/images/chef/c4.jpg);"
-                                            class="team-img back-img"> 
+                                            class="team-img back-img">
 
                                         </div>
                                         <h3 class="h3-title">Hozaifa Mehedi</h3>
                                         <div class="social-icon">
                                             <ul>
                                                 <li>
-                                                    <a href="https://www.linkedin.com/in/hozaifa-mehdi-01b8b41b8" target="_blank"><i class="uil uil-linkedin"></i></a>
+                                                    <a href="https://www.linkedin.com/in/hozaifa-mehdi-01b8b41b8"
+                                                        target="_blank"><i class="uil uil-linkedin"></i></a>
                                                 </li>
                                                 <li>
                                                     <a href="https://www.instagram.com/hozaifamehdi" target="_blank">
@@ -723,7 +749,8 @@
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="https://www.youtube.com/channel/UCS9352f8ZKr0icKe-W3vhsA" target="_blank">
+                                                    <a href="https://www.youtube.com/channel/UCS9352f8ZKr0icKe-W3vhsA"
+                                                        target="_blank">
                                                         <i class="uil uil-youtube"></i>
                                                     </a>
                                                 </li>
@@ -731,7 +758,7 @@
                                         </div>
                                     </div>
                                 </div>
-                               <!--                  (5th expert)
+                                <!--                  (5th expert)
                                 <div class="col-lg-4 swiper-slide">
                                     <div class="team-box text-center">
                                         <div style="background-image: url(assets/images/chef/c5.jpg);"
@@ -759,18 +786,18 @@
                                     </div>
                                 </div>
                             </div>                           (5th expert) -->
-                            <div class="swiper-button-wp">
-                                <div class="swiper-button-prev swiper-button">
-                                    <i class="uil uil-angle-left"></i>
+                                <div class="swiper-button-wp">
+                                    <div class="swiper-button-prev swiper-button">
+                                        <i class="uil uil-angle-left"></i>
+                                    </div>
+                                    <div class="swiper-button-next swiper-button">
+                                        <i class="uil uil-angle-right"></i>
+                                    </div>
                                 </div>
-                                <div class="swiper-button-next swiper-button">
-                                    <i class="uil uil-angle-right"></i>
-                                </div>
+                                <div class="swiper-pagination"></div>
                             </div>
-                            <div class="swiper-pagination"></div>
                         </div>
                     </div>
-                </div>
             </section>
 
             <section class="testimonials section bg-light">
@@ -812,7 +839,7 @@
                                                 <h3 class="h3-title">
                                                     Sandeep Koushik
                                                 </h3>
-                                                <p>This is soooo dope!! I definitely will get something else. 
+                                                <p>This is soooo dope!! I definitely will get something else.
                                                     The quality on this diet plan is top notch.</p>
                                             </div>
                                         </div>
@@ -834,7 +861,8 @@
                                                 <h3 class="h3-title">
                                                     I.B Lal
                                                 </h3>
-                                                <p>The stamps inside the holder page looks a kind of funny . Smaller than 
+                                                <p>The stamps inside the holder page looks a kind of funny . Smaller
+                                                    than
                                                     acture's size. compare to my old chinese collection.</p>
                                             </div>
                                         </div>
@@ -856,8 +884,9 @@
                                                 <h3 class="h3-title">
                                                     Vijay
                                                 </h3>
-                                                <p>Fast Responds, Great Price and Great Seller too, Recommended. Thank You.
-                                                    </p>
+                                                <p>Fast Responds, Great Price and Great Seller too, Recommended. Thank
+                                                    You.
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -879,7 +908,7 @@
                                                     R.S Soni
                                                 </h3>
                                                 <p>★★SMOOTH TRANSACTION★HIGHLY RECOMMENDED★THANK YOU★★
-                                                   .</p>
+                                                    .</p>
                                             </div>
                                         </div>
                                     </div>
@@ -914,7 +943,8 @@
                             <div class="faq-box">
                                 <h4 class="h4-title">What do i get my refund?</h4>
                                 <p>Please read our refund policy carefully.
-                                    for more help you can talk to our agents. we are here for you 24*7. Sorry for the inconvenience.</p>
+                                    for more help you can talk to our agents. we are here for you 24*7. Sorry for the
+                                    inconvenience.</p>
                             </div>
                             <div class="faq-box">
                                 <h4 class="h4-title">How long it will take to come in good shape?</h4>
@@ -930,13 +960,14 @@
                             <div class="faq-box">
                                 <h4 class="h4-title">What is cost of Meeting Experts?</h4>
                                 <p>The cost of meeting experts is varies from experts to experts.
-                                    for example if you meet our most liked expert Saurabh Tiwari then it will cost higher.
-                                    </p>
+                                    for example if you meet our most liked expert Saurabh Tiwari then it will cost
+                                    higher.
+                                </p>
                             </div>
                             <div class="faq-box">
                                 <h4 class="h4-title">Who is eligible for pro membership?</h4>
                                 <p>Persons who can buy our diet plans They will eligible for the Membership pro.
-                                 </p>
+                                </p>
                             </div>
                         </div>
 
@@ -969,12 +1000,15 @@
                                             style="background-image: url(assets/images/blog/blog1.jpg);"></div>
                                         <div class="blog-text">
                                             <p class="blog-date">May.12.2023</p>
-                                            <a href="#" class="h4-title">All about different categories of Energy Drinks.</a>
+                                            <a href="#" class="h4-title">All about different categories of Energy
+                                                Drinks.</a>
                                             <p>Energy drinks can be made easily at home.
-                                                However, the amount of caffeine differs from product to product.So,it is better to purchase
+                                                However, the amount of caffeine differs from product to product.So,it is
+                                                better to purchase
                                                 a one from market.
-                                                </p>
-                                            <a href="https://hetlifyblog.blogspot.com/2023/05/all-about-different-categories-of.html" class="sec-btn">Read More</a>
+                                            </p>
+                                            <a href="https://hetlifyblog.blogspot.com/2023/05/all-about-different-categories-of.html"
+                                                class="sec-btn">Read More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -985,9 +1019,11 @@
                                         <div class="blog-text">
                                             <p class="blog-date">May.12.2023</p>
                                             <a href="#" class="h4-title">Fresh Veggie and rice combo for dinner.</a>
-                                            <p>This classic Veg Fried Rice recipe is made with a hearty mix of fresh vegetables, green onions, 
+                                            <p>This classic Veg Fried Rice recipe is made with a hearty mix of fresh
+                                                vegetables, green onions,
                                                 seasonings and spices for an incredibly flavorful fried rice dish.</p>
-                                            <a href="https://hetlifyblog.blogspot.com/2023/05/this-classic-veg-fried-rice-recipe-is.html" class="sec-btn">Read More</a>
+                                            <a href="https://hetlifyblog.blogspot.com/2023/05/this-classic-veg-fried-rice-recipe-is.html"
+                                                class="sec-btn">Read More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -998,10 +1034,12 @@
                                         <div class="blog-text">
                                             <p class="blog-date">May.12.2023</p>
                                             <a href="#" class="h4-title">What actually eating a balance diet means?</a>
-                                            <p>Eating a healthy, balanced diet is an important part of maintaining good health, and can help you feel your best.
-                                                </p>
-                                        </p>
-                                            <a href="https://hetlifyblog.blogspot.com/2023/05/what-actually-eating-balance-diet-means.html" class="sec-btn">Read More</a>
+                                            <p>Eating a healthy, balanced diet is an important part of maintaining good
+                                                health, and can help you feel your best.
+                                            </p>
+                                            </p>
+                                            <a href="https://hetlifyblog.blogspot.com/2023/05/what-actually-eating-balance-diet-means.html"
+                                                class="sec-btn">Read More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1105,8 +1143,10 @@
                                             <h3 class="h3-title">Company</h3>
                                             <ul>
                                                 <li><a href="TermAndCondition/term.html">Terms & Conditions</a></li>
-                                                <li><a href="TermAndCondition/privacypolicy/privacy.html">Privacy Policy</a></li>
-                                                <li><a href="TermAndCondition/cookiepolicy/cookie.html">Cookie Policy</a></li>
+                                                <li><a href="TermAndCondition/privacypolicy/privacy.html">Privacy
+                                                        Policy</a></li>
+                                                <li><a href="TermAndCondition/cookiepolicy/cookie.html">Cookie
+                                                        Policy</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -1174,8 +1214,22 @@
     <script src="assets/js/smooth-scroll.js"></script>
     <!-- custom js  -->
     <script src="main.js"></script>
+
+
+    <!-- My script -->
     <script>
-        
+        let login = <?= $json?>
+
+        // function setLogin() {
+        //     login = true;
+        // }
+        function isLogin() {
+            if (login == 1) {
+                window.location.href = "./youtubelogin/home.php";
+            } else {
+                window.location.href = "./youtubelogin/login.php";
+            }
+        }
     </script>
 
 </body>
